@@ -3,17 +3,47 @@
 <head>
           <meta charset="UTF-8">
           <meta name="viewport" content="width=device-width, initial-scale=1.0">
-         <style>
-          .div1{
-                    width:100px;
-                    height:100px;
-                    background-color: aqua;
-          }
-         </style>
+         <link rel="stylesheet" href="../static/style.css" />
           <title>{{title}}</title>
 </head>
 <body>
-       <p>{{pdata}}</p>
-       <div class="div1"></div>   
+       <!-- <p>{{pdata}}</p>
+       <div class="div1"></div>    -->
+
+  {% include "header.html" %}
+  <section id="home" class="section">
+    <h2>Welcome to My Website</h2>
+    <p>This is a simple website created using HTML, CSS, and JavaScript.</p>
+    <button onclick="showMessage()">Click Me</button>
+  </section>
+
+  <section id="about" class="section">
+    <h2>About Us</h2>
+    <img src="https://via.placeholder.com/400x200" alt="About image" />
+    <p>We provide amazing solutions to everyday problems.</p>
+  </section>
+
+  <section id="services" class="section">
+    <h2>Our Services</h2>
+    <ul>
+      <li>Web Design</li>
+      <li>Development</li>
+      <li>Marketing</li>
+    </ul>
+  </section>
+
+  <section id="contact" class="section">
+    <h2>Contact Us</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea placeholder="Your Message"></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+  {% include "footer.html" %}
+
+  <script src="../static/script.js"></script>
+
 </body>
 </html>
